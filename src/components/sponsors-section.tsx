@@ -186,7 +186,7 @@ function LogoTile({ children, size = "lg" }: LogoTileProps) {
 
 export function SponsorsSection() {
   return (
-    <section id="sponsors" className="relative py-28 sm:py-36 lg:py-40 px-8 sm:px-12 md:px-16 lg:px-24">
+    <section id="sponsors" className="relative py-28 sm:py-36 lg:py-48 section-padding">
       <div className="max-w-7xl mx-auto">
         {/* Sponsors */}
         <div className="mb-24">

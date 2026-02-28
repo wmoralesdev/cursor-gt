@@ -20,7 +20,7 @@ export function FooterCTA() {
     <>
       {/* Final CTA Section */}
       <section
-        className="relative py-40 sm:py-48 px-8 sm:px-12 md:px-16 lg:px-24 overflow-hidden"
+        className="relative py-36 sm:py-48 section-padding overflow-hidden"
         style={{ background: "#080808" }}
       >
         {/* Glow behind text */}
@@ -94,7 +94,7 @@ export function FooterCTA() {
 
       {/* Footer */}
       <footer
-        className="relative py-16 px-8 sm:px-12 md:px-16 lg:px-24"
+        className="relative py-24 section-padding"
         style={{
           borderTop: "1px solid #1e1e1e",
           background: "#060606",

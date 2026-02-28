@@ -33,7 +33,7 @@ export function DetailsSection() {
   return (
     <section
       id="details"
-      className="relative py-28 sm:py-36 lg:py-40 px-8 sm:px-12 md:px-16 lg:px-24"
+      className="relative py-28 sm:py-36 lg:py-48 section-padding"
       style={{ background: "#0a0a0a" }}
     >
       {/* Top rule */}

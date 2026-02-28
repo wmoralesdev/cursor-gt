@@ -23,7 +23,7 @@ const profiles = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-28 sm:py-36 lg:py-40 px-8 sm:px-12 md:px-16 lg:px-24">
+    <section id="about" className="relative py-28 sm:py-36 lg:py-48 section-padding">
       {/* Subtle left border accent */}
       <div
         className="absolute left-0 top-0 bottom-0 w-px"

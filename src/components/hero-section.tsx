@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col overflow-hidden"
+      className="relative min-h-screen flex flex-col overflow-hidden section-padding"
       style={{ background: "#080808" }}
     >
       {/* Grid lines background */}
@@ -36,7 +36,7 @@ export function HeroSection() {
       />
 
       {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between px-8 sm:px-12 md:px-16 lg:px-24 py-8">
+      <nav className="relative z-10 flex items-center justify-between max-w-7xl mx-auto w-full py-8">
         <div className="flex items-center gap-3">
           {/* Cursor hexagonal logo mark */}
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@ export function HeroSection() {
       </nav>
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center px-8 sm:px-12 md:px-16 lg:px-24 pt-12 pb-24">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center max-w-7xl mx-auto w-full pt-12 pb-24">
         {/* Event label */}
         <div className="mb-10" style={{ animationDelay: "0.1s" }}>
           <span className="tag">
@@ -162,7 +162,7 @@ export function HeroSection() {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 sm:justify-center">
           <a
             href={LUMA_URL}
             target="_blank"
@@ -178,7 +178,7 @@ export function HeroSection() {
 
         {/* Stats bar */}
         <div
-          className="mt-16 flex flex-wrap gap-8"
+          className="mt-16 flex flex-wrap gap-8 justify-center"
           style={{ borderTop: "1px solid #1e1e1e", paddingTop: "24px" }}
         >
           {[
