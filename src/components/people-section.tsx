@@ -1,4 +1,3 @@
-import React from "react";
 import { PersonCard } from "./brief/person-card";
 import type { PersonCardData } from "./brief/person-card";
 import { sortPeopleByName } from "../utils/sort-people";
