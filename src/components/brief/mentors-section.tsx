@@ -56,6 +56,15 @@ const mentors: PersonCardData[] = [
     blurb: "Full‑Stack, consultor en IA y community builder con 15+ años creando soluciones en LatAm.",
   },
   {
+    initials: "FS",
+    name: "Francis Sanchinelli",
+    photo: "/staff/francis.webp",
+    role: "CEO",
+    company: "U3Tech y Vudy · Presidente Asociación Blockchain Guatemala",
+    blurb:
+      "Emprendedor tecnológico con más de 15 años construyendo empresas. Participa como emprendedor en MIT REAP Guatemala y fue fundador de Ethereum Guatemala, liderando la construcción de ecosistemas, infraestructura y talento tecnológico con impacto regional.",
+  },
+  {
     initials: "JA",
     name: "José Luis Antúnez Sales",
     photo: "/staff/jose-luis.jpeg",

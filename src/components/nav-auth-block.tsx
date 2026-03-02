@@ -11,7 +11,7 @@ interface NavAuthBlockProps {
   onLinkClick?: () => void;
 }
 
-export function NavAuthBlock({ variant = "minimal", onLinkClick }: NavAuthBlockProps) {
+export function NavAuthBlock({ onLinkClick }: NavAuthBlockProps) {
   const { isLoaded, isSignedIn } = useAuth();
   const { user } = useUser();
   const { signOut } = useClerk();
@@ -19,16 +19,6 @@ export function NavAuthBlock({ variant = "minimal", onLinkClick }: NavAuthBlockP
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-
-  const isMinimal = variant === "minimal";
-
-  const loadingClass = isMinimal
-    ? "h-9 w-9 animate-pulse rounded-full bg-white/10"
-    : "h-9 w-20 animate-pulse rounded-lg bg-white/10";
-
-  const loginClass = isMinimal
-    ? "rounded-full border border-white/10 px-3 py-2 text-xs font-medium text-fg-3 transition-all duration-200 hover:border-accent/40 hover:text-accent"
-    : "rounded-lg bg-accent px-5 py-2 text-sm font-semibold text-[#050505] transition-all duration-200 hover:shadow-[0_0_24px_rgba(255,107,44,0.3)] hover:brightness-110";
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -49,16 +39,8 @@ export function NavAuthBlock({ variant = "minimal", onLinkClick }: NavAuthBlockP
     navigate("/");
   }
 
-  if (!isLoaded) {
-    return <div className={loadingClass} />;
-  }
-
-  if (!isSignedIn) {
-    return (
-      <Link to="/login" onClick={onLinkClick} className={loginClass}>
-        {t("nav.login")}
-      </Link>
-    );
+  if (!isLoaded || !isSignedIn) {
+    return null; // Login hidden for now
   }
 
   const avatarUrl = user?.imageUrl;
