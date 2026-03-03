@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import { AnchorHeading } from "./anchor-heading";
 
 const LUMA_URL = "https://lu.ma/935r7zp6";
 
@@ -6,8 +7,10 @@ const navLinks = [
   { href: "#about", label: "Sobre el evento" },
   { href: "#details", label: "Detalles" },
   { href: "#sponsors", label: "Sponsors" },
+  { href: "#partners", label: "Partners" },
   { href: "#schedule", label: "Agenda" },
   { href: "#faq", label: "FAQ" },
+  { href: "#cta", label: "Registro" },
 ];
 
 const hosts = [
@@ -23,7 +26,7 @@ export function FooterCTA() {
   return (
     <>
       {/* Final CTA Section */}
-      <section className="relative py-36 sm:py-48 section-padding overflow-hidden bg-bg">
+      <section id="cta" className="group relative py-36 sm:py-48 section-padding overflow-hidden bg-bg">
         {/* Glow behind text */}
         <div className="absolute pointer-events-none glow-center" />
 
@@ -32,10 +35,12 @@ export function FooterCTA() {
 
         <div className="max-w-7xl mx-auto text-center reveal">
           <span className="tag mb-8 inline-block">// registro abierto</span>
-          <h2 className="font-bold uppercase mb-6 font-display text-[clamp(3rem,10vw,8rem)] text-fg tracking-[-0.03em] leading-[0.9]">
-            ¿LISTO PARA<br />
-            <span className="text-accent">CONSTRUIR?</span>
-          </h2>
+          <AnchorHeading id="cta">
+            <h2 className="font-bold uppercase mb-6 font-display text-[clamp(3rem,10vw,8rem)] text-fg tracking-[-0.03em] leading-[0.9]">
+              ¿LISTO PARA<br />
+              <span className="text-accent">CONSTRUIR?</span>
+            </h2>
+          </AnchorHeading>
           <p className="mx-auto mb-12 font-display text-[1.05rem] text-fg-3 leading-[1.7] max-w-[480px]">
             El cupo es limitado. Asegura tu lugar y construye el futuro de Centroamérica con IA.
           </p>

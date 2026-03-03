@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnchorHeading } from "./anchor-heading";
 
 interface FAQItem {
   q: string;
@@ -42,7 +43,7 @@ export function FAQSection() {
   return (
     <section
       id="faq"
-      className="relative py-28 sm:py-36 lg:py-48 section-padding bg-bg"
+      className="group relative py-28 sm:py-36 lg:py-48 section-padding bg-bg"
     >
       {/* Top rule */}
       <div className="h-rule mb-20 max-w-7xl mx-auto" />
@@ -52,9 +53,11 @@ export function FAQSection() {
           {/* Left heading */}
           <div className="lg:col-span-4 reveal">
             <span className="tag mb-4 inline-block">// preguntas frecuentes</span>
-            <h2 className="font-bold uppercase leading-none font-display text-[clamp(2rem,4vw,3rem)] text-fg tracking-[-0.02em]">
-              ¿TIENES<br />DUDAS?
-            </h2>
+            <AnchorHeading id="faq">
+              <h2 className="font-bold uppercase leading-none font-display text-[clamp(2rem,4vw,3rem)] text-fg tracking-[-0.02em]">
+                ¿TIENES<br />DUDAS?
+              </h2>
+            </AnchorHeading>
             <p className="mt-4 font-display text-[0.85rem] text-fg-3 leading-[1.7] max-w-[260px]">
               Si no encuentras tu respuesta aquí, únete a nuestra comunidad de WhatsApp.
             </p>

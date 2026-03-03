@@ -1,5 +1,6 @@
 import { PersonCard } from "./brief/person-card";
 import type { PersonCardData } from "./brief/person-card";
+import { AnchorHeading } from "./anchor-heading";
 import { sortPeopleByName } from "../utils/sort-people";
 
 const organizers: PersonCardData[] = [
@@ -126,7 +127,7 @@ export function PeopleSection() {
   return (
     <section
       id="people"
-      className="relative py-24 sm:py-32 section-padding bg-bg"
+      className="group relative py-24 sm:py-32 section-padding bg-bg"
     >
       <div className="h-rule mb-16 max-w-7xl mx-auto" />
 
@@ -135,9 +136,11 @@ export function PeopleSection() {
         <div className="reveal mb-16">
           <span className="tag mb-4 inline-block">// equipo & invitados</span>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-            <h2 className="font-bold uppercase leading-none font-display text-[clamp(1.8rem,4vw,2.8rem)] text-fg tracking-[-0.02em]">
-              LAS PERSONAS<br />DETRÁS DEL EVENTO
-            </h2>
+            <AnchorHeading id="people">
+              <h2 className="font-bold uppercase leading-none font-display text-[clamp(1.8rem,4vw,2.8rem)] text-fg tracking-[-0.02em]">
+                LAS PERSONAS<br />DETRÁS DEL EVENTO
+              </h2>
+            </AnchorHeading>
             <p className="font-display text-sm text-fg-3 leading-[1.7] max-w-[360px] sm:text-right">
               El equipo organizador y los invitados que harán posible el Cursor Hackathon Guatemala.
             </p>

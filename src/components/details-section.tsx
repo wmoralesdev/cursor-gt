@@ -29,11 +29,13 @@ const details = [
   },
 ];
 
+import { AnchorHeading } from "./anchor-heading";
+
 export function DetailsSection() {
   return (
     <section
       id="details"
-      className="relative py-28 sm:py-36 lg:py-48 section-padding bg-bg-alt"
+      className="group relative py-28 sm:py-36 lg:py-48 section-padding bg-bg-alt"
     >
       {/* Top rule */}
       <div className="h-rule mb-20 max-w-7xl mx-auto" />
@@ -42,9 +44,11 @@ export function DetailsSection() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 reveal">
           <div>
             <span className="tag mb-4 inline-block">// detalles</span>
-            <h2 className="font-bold uppercase leading-none font-display text-[clamp(2rem,5vw,3.5rem)] text-fg tracking-[-0.02em]">
-              DÓNDE &amp; CUÁNDO
-            </h2>
+            <AnchorHeading id="details">
+              <h2 className="font-bold uppercase leading-none font-display text-[clamp(2rem,5vw,3.5rem)] text-fg tracking-[-0.02em]">
+                DÓNDE &amp; CUÁNDO
+              </h2>
+            </AnchorHeading>
           </div>
           <p className="font-mono text-[0.7rem] text-fg-2 tracking-[0.1em] max-w-[240px] text-right leading-[1.6]">
             Asistencia presencial<br />requerida para participar

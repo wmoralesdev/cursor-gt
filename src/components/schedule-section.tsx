@@ -1,3 +1,5 @@
+import { AnchorHeading } from "./anchor-heading";
+
 interface ScheduleItem {
   time: string;
   title: string;
@@ -51,7 +53,7 @@ export function ScheduleSection() {
   return (
     <section
       id="schedule"
-      className="relative py-28 sm:py-36 lg:py-48 section-padding bg-bg"
+      className="group relative py-28 sm:py-36 lg:py-48 section-padding bg-bg"
     >
       {/* Top rule */}
       <div className="h-rule mb-20 max-w-7xl mx-auto" />
@@ -61,10 +63,12 @@ export function ScheduleSection() {
           {/* Left sticky heading */}
           <div className="lg:col-span-4 reveal">
             <span className="tag mb-4 inline-block">// agenda</span>
-            <h2 className="font-bold uppercase leading-none mb-6 font-display text-[clamp(2rem,4vw,3rem)] text-fg tracking-[-0.02em]">
-              EL DÍA<br />
-              <span className="text-accent">07.03</span>
-            </h2>
+            <AnchorHeading id="schedule">
+              <h2 className="font-bold uppercase leading-none mb-6 font-display text-[clamp(2rem,4vw,3rem)] text-fg tracking-[-0.02em]">
+                EL DÍA<br />
+                <span className="text-accent">07.03</span>
+              </h2>
+            </AnchorHeading>
             <p className="font-display text-[0.9rem] text-fg-3 leading-[1.7] max-w-[300px]">
               Un día completo de construcción, aprendizaje y conexiones con la comunidad tech de Centroamérica.
             </p>

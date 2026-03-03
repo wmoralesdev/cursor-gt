@@ -21,9 +21,11 @@ const profiles = [
   },
 ];
 
+import { AnchorHeading } from "./anchor-heading";
+
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-28 sm:py-36 lg:py-48 section-padding bg-bg">
+    <section id="about" className="group relative py-28 sm:py-36 lg:py-48 section-padding bg-bg">
       {/* Subtle left border accent */}
       <div className="absolute left-0 top-0 bottom-0 w-px border-accent-left" />
 
@@ -32,13 +34,13 @@ export function AboutSection() {
           {/* Left: Heading block */}
           <div className="reveal min-w-0">
             <span className="tag mb-6 inline-block">// sobre el evento</span>
-            <h2
-              className="font-bold uppercase leading-[0.92] mb-8 font-display text-[clamp(2.5rem,6vw,4.5rem)] text-fg tracking-[-0.02em]"
-            >
-              CONSTRUYE CON <span className="text-accent">IA.</span>
-              <br />
-              SIN LÍMITES.
-            </h2>
+            <AnchorHeading id="about">
+              <h2 className="font-bold uppercase leading-[0.92] mb-8 font-display text-[clamp(2.5rem,6vw,4.5rem)] text-fg tracking-[-0.02em]">
+                CONSTRUYE CON <span className="text-accent">IA.</span>
+                <br />
+                SIN LÍMITES.
+              </h2>
+            </AnchorHeading>
             <p className="mb-6 font-display text-[1.05rem] text-fg-2 leading-[1.7] max-w-[min(480px,100%)]">
               El Cursor Hackathon Guatemala es un espacio para builders de toda Centroamérica.
               En 7 horas, tu equipo construirá algo real usando las herramientas de IA más avanzadas.
